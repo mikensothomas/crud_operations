@@ -4,7 +4,7 @@ from employee import views
 
 urlpatterns = [  
     path('admin/', admin.site.urls),  
-    path('emp', views.emp),  
+    path('salDados', views.salDados),  
     path('dados',views.dados),  
     path('edit/<int:id>', views.edit),  
     path('update/<int:id>', views.update),  
