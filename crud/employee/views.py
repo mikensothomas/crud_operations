@@ -18,16 +18,16 @@ def salDados(request):
 def dados(request):  
     employees = Employee.objects.all()  
     return render(request,"dados.html",{'employees':employees})  
-def edit(request, id):  
+def editar(request, id):  
     employee = Employee.objects.get(id=id)  
-    return render(request,'edit.html', {'employee':employee})  
+    return render(request,'editar.html', {'employee':employee})  
 def update(request, id):  
     employee = Employee.objects.get(id=id)  
     form = EmployeeForm(request.POST, instance = employee)  
     if form.is_valid():  
         form.save()  
         return redirect("/dados")  
-    return render(request, 'edit.html', {'employee': employee})  
+    return render(request, 'editar.html', {'employee': employee})  
 def destroy(request, id):  
     employee = Employee.objects.get(id=id)  
     employee.delete()  
