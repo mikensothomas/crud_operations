@@ -14,23 +14,24 @@
         {% csrf_token %}
 
         <fieldset style="position: absolute; left: 30%; background-color: aqua; width: 40%;">
-            <legend>
+            <legend style="text-align: center;">
                 PÁGINA DE CADASTRO
             </legend>
             <div>
-                <div>
+                <a style="text-decoration-line: none;" href="/dados">Página de dados</a>
+                <div style="text-align: center;">
                     <p>Nome do setor:</p>{{ form.nome_setor }}
                 </div>
-                <div>
+                <div style="text-align: center;">
                     <p>Funcionarios:</p>{{ form.funcionarios }}
                 </div>
-                <div>
+                <div style="text-align: center;">
                     <p>Fornecedores:</p>{{ form.fornecedores }}
                 </div>
-                <div>
+                <div style="text-align: center;">
                     <p>Produtos:</p>{{ form.produtos }}
                 </div>
-                <div>
+                <div style="text-align: center;">
                     <p>Empresas terceiras:</p>{{ form.empresa_terceira }}
                 </div>
                 <div style="text-align: center;">

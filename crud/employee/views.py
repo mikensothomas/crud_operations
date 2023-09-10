@@ -9,15 +9,15 @@ def emp(request):
         if form.is_valid():  
             try:  
                 form.save()  
-                return redirect('/show')  
+                return redirect('/dados')  
             except:  
                 pass  
     else:  
         form = EmployeeForm()  
     return render(request,'index.html',{'form':form})  
-def show(request):  
+def dados(request):  
     employees = Employee.objects.all()  
-    return render(request,"show.html",{'employees':employees})  
+    return render(request,"dados.html",{'employees':employees})  
 def edit(request, id):  
     employee = Employee.objects.get(id=id)  
     return render(request,'edit.html', {'employee':employee})  
@@ -26,9 +26,9 @@ def update(request, id):
     form = EmployeeForm(request.POST, instance = employee)  
     if form.is_valid():  
         form.save()  
-        return redirect("/show")  
+        return redirect("/dados")  
     return render(request, 'edit.html', {'employee': employee})  
 def destroy(request, id):  
     employee = Employee.objects.get(id=id)  
     employee.delete()  
-    return redirect("/show")
+    return redirect("/dados")
