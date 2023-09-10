@@ -7,18 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Record</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
-    <table>
+    <a style="color: blue; position: absolute; left: 33%; text-decoration-line: none;" href="/emp">Adicionar dados</a>
+    <br>
+    <table border="1" style="position: absolute; top: 5%; left: 15%;">
         <thead>
             <tr>
-                <th>Employee ID</th>
-                <th>Employee Name</th>
-                <th>Employee Email</th>
-                <th>Employee Contact</th>
-                <th>Action</th>
+                <th>Nome do setor</th>
+                <th>Funcionarios</th>
+                <th>Fornecedores</th>
+                <th>Produtos</th>
+                <th>Empresa terceira</th>
+                <th>Ação</th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +29,7 @@
                 <td>{{ employee.eid }}</td>
                 <td>{{employee.ename}}</td>
                 <td>{{employee.eemail}}</td>
+                <td>{{employee.econtact}}</td>
                 <td>{{employee.econtact}}</td>
                 <td>
                     <a href="/edit/{{ employee.id }}">Edit</a>
@@ -38,7 +41,6 @@
     </table>
     <br>
     <br>
-    <button><a style="color:white;" href="/emp">Add New Record</a></button>
 </body>
 
 </html>

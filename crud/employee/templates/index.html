@@ -7,34 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
     <form method="POST" action="/emp">
         {% csrf_token %}
-        <div>
-            <br>
-            <p>
-                <h3>Enter Details</h3>
-            </p>
+
+        <fieldset style="position: absolute; left: 30%; background-color: aqua; width: 40%;">
+            <legend>
+                PÁGINA DE CADASTRO
+            </legend>
             <div>
-                <p>Employee Id:</p>{{ form.eid }}
+                <div>
+                    <p>Nome do setor:</p>{{ form.eid }}
+                </div>
+                <div>
+                    <p>Funcionarios:</p>{{ form.ename }}
+                </div>
+                <div>
+                    <p>Fornecedores:</p>{{ form.eemail }}
+                </div>
+                <div>
+                    <p>Produtos:</p>{{ form.econtact }}
+                </div>
+                <div>
+                    <p>Empresas terceiras:</p>{{ form.econtact }}
+                </div>
+                <div style="text-align: center;">
+                    <br>
+                    <button style="cursor: pointer;" type="submit">SALVAR</button>
+                </div>
             </div>
-            <div>
-                <p>Employee Name::</p>{{ form.ename }}
-            </div>
-            <div>
-                <p>Employee Email:</p>{{ form.eemail }}
-            </div>
-            <div>
-                <p>Employee contact:</p>{{ form.econtact }}
-            </div>
-            <div>
-                <br>
-                <button type="submit">Submit</button>
-            </div>
-        </div>
+    
+        </fieldset>
     </form>
 </body>
 
