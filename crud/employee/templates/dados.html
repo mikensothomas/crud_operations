@@ -26,14 +26,14 @@
         <tbody>
             {% for employee in employees %}
             <tr>
-                <td>{{ employee.nome_setor }}</td>
+                <td>{{employee.nome_setor}}</td>
                 <td>{{employee.funcionarios}}</td>
                 <td>{{employee.fornecedores}}</td>
                 <td>{{employee.produtos}}</td>
                 <td>{{employee.empresa_terceira}}</td>
                 <td>
                     <a href="/editar/{{ employee.id }}">Editar</a>
-                    <a href="/delete/{{employee.id}}">Deletar</a>
+                    <a href="/delete/{{employee.id}}">Excluir</a>
                 </td>
             </tr>
             {% endfor %}

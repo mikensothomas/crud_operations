@@ -7,6 +7,6 @@ urlpatterns = [
     path('salDados', views.salDados),  
     path('dados',views.dados),  
     path('editar/<int:id>', views.editar),  
-    path('update/<int:id>', views.update),  
-    path('delete/<int:id>', views.destroy),  
+    path('update/<int:id>', views.atualizar),  
+    path('delete/<int:id>', views.excluir),  
 ]  

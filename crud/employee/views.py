@@ -21,14 +21,14 @@ def dados(request):
 def editar(request, id):  
     employee = Employee.objects.get(id=id)  
     return render(request,'editar.html', {'employee':employee})  
-def update(request, id):  
+def atualizar(request, id):  
     employee = Employee.objects.get(id=id)  
     form = EmployeeForm(request.POST, instance = employee)  
     if form.is_valid():  
         form.save()  
         return redirect("/dados")  
     return render(request, 'editar.html', {'employee': employee})  
-def destroy(request, id):  
+def excluir(request, id):  
     employee = Employee.objects.get(id=id)  
     employee.delete()  
     return redirect("/dados")
