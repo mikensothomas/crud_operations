@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Record</title>
+    <title>Projeto</title>
     {% load static %}
 </head>
 
@@ -26,14 +26,14 @@
         <tbody>
             {% for employee in employees %}
             <tr>
-                <td>{{ employee.eid }}</td>
-                <td>{{employee.ename}}</td>
-                <td>{{employee.eemail}}</td>
-                <td>{{employee.econtact}}</td>
-                <td>{{employee.econtact}}</td>
+                <td>{{ employee.nome_setor }}</td>
+                <td>{{employee.funcionarios}}</td>
+                <td>{{employee.fornecedores}}</td>
+                <td>{{employee.produtos}}</td>
+                <td>{{employee.empresa_terceira}}</td>
                 <td>
-                    <a href="/edit/{{ employee.id }}">Edit</a>
-                    <a href="/delete/{{employee.id}}">Delete</a>
+                    <a href="/edit/{{ employee.id }}">Editar</a>
+                    <a href="/delete/{{employee.id}}">Deletar</a>
                 </td>
             </tr>
             {% endfor %}

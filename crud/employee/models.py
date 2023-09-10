@@ -1,9 +1,10 @@
 from django.db import models  
 class Employee(models.Model):  
-    eid = models.CharField(max_length=20)  
-    ename = models.CharField(max_length=100)  
-    eemail = models.EmailField()  
-    econtact = models.CharField(max_length=15) 
+    nome_setor = models.CharField(max_length=30)  
+    funcionarios = models.IntegerField(blank=True, null=True)  
+    fornecedores = models.IntegerField(blank=True, null=True)  
+    produtos = models.IntegerField(blank=True, null=True)
+    empresa_terceira = models.IntegerField(blank=True, null=True) 
 
     def __str__(self):
         return "%s " %(self.ename) 
