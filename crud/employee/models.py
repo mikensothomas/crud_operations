@@ -7,6 +7,6 @@ class Employee(models.Model):
     empresa_terceira = models.IntegerField(blank=True, null=True) 
 
     def __str__(self):
-        return "%s " %(self.ename) 
+        return "%s " %(self.nome_setor) 
     class Meta:  
         db_table = "employee"  

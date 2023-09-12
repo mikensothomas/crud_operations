@@ -3,7 +3,7 @@ from django.urls import path
 from employee import views  
 
 urlpatterns = [  
-    path('admin/', admin.site.urls),  
+    #path('admin/', admin.site.urls),  
     path('salDados', views.salDados),  
     path('dados',views.dados),  
     path('editar/<int:id>', views.editar),  
