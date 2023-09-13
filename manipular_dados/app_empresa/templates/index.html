@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de cadastro</title>
+</head>
+
+<body>
+    <form method="POST" action="/salDados">
+        {% csrf_token %}
+
+        <fieldset style="position: absolute; left: 30%; background-color: aqua; width: 40%;">
+            <legend style="text-align: center;">
+                PÁGINA DE CADASTRO
+            </legend>
+            <div>
+                <a style="text-decoration-line: none;" href="/dados">Página de dados</a>
+                <div style="text-align: center;">
+                    <p>Nome do setor:</p>{{ form.nome_setor }}
+                </div>
+                <div style="text-align: center;">
+                    <p>Funcionarios:</p>{{ form.funcionarios }}
+                </div>
+                <div style="text-align: center;">
+                    <p>Fornecedores:</p>{{ form.fornecedores }}
+                </div>
+                <div style="text-align: center;">
+                    <p>Produtos:</p>{{ form.produtos }}
+                </div>
+                <div style="text-align: center;">
+                    <p>Empresas terceiras:</p>{{ form.empresa_terceira }}
+                </div>
+                <div style="text-align: center;">
+                    <br>
+                    <button style="cursor: pointer;" type="submit">SALVAR</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

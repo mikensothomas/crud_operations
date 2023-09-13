@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+</head>
+
+<body>
+    <a style="color: blue; position: absolute; left: 33%; text-decoration-line: none;" href="/salDados">Adicionar dados</a>
+    <br>
+    <table border="1" style="position: absolute; top: 5%; left: 15%;">
+        <thead>
+            <tr>
+                <th>Nome do setor</th>
+                <th>Funcionarios</th>
+                <th>Fornecedores</th>
+                <th>Produtos</th>
+                <th>Empresa terceira</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employee %}
+            <tr>
+                <td>{{employee.nome_setor}}</td>
+                <td>{{employee.funcionarios}}</td>
+                <td>{{employee.fornecedores}}</td>
+                <td>{{employee.produtos}}</td>
+                <td>{{employee.empresa_terceira}}</td>
+                <td>
+                    <a href="/editar/{{employee.id}}">Editar</a>
+                    <a href="/excluir/{{employee.id}}">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+</body>
+
+</html>
